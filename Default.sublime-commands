@@ -1,0 +1,10 @@
+[
+  {
+    "caption": "Pinyin: Convert selection",
+    "command": "pinyin_from_selection"
+  },
+  {
+    "caption": "Pinyin: Convert selection with underline",
+    "command": "pinyin_from_selection_underline"
+  }
+]

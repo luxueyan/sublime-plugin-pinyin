@@ -1,0 +1,4 @@
+[
+  { "keys": ["alt+ctrl+p"], "command": "pinyin_from_selection"},
+  { "keys": ["alt+ctrl+u"], "command": "pinyin_from_selection_underline"}
+]
