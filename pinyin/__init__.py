@@ -1,3 +1,3 @@
 # -*- coding: utf-8 -*-
 
-from .pinyin import *
+# from .pinyin import *

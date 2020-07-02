@@ -1,6 +1,6 @@
 import sublime
 import sublime_plugin
-import pinyin.pinyin
+from .pinyin import translate
 
 # print(dir(pinyin.pinyin.__name__))
 class PinyinFromSelectionCommand(sublime_plugin.TextCommand):
@@ -10,7 +10,7 @@ class PinyinFromSelectionCommand(sublime_plugin.TextCommand):
             if not region.empty():
                 text = self.view.substr(region)
                 print(text)
-                pinyinStr = pinyin.pinyin.get(text, format="strip", delimiter="")
+                pinyinStr = translate.get(text, format="strip", delimiter="")
                 print(pinyinStr)
                 if pinyinStr is not None:
                     self.view.replace(edit, region, pinyinStr)
@@ -21,7 +21,7 @@ class PinyinFromSelectionUnderlineCommand(sublime_plugin.TextCommand):
             if not region.empty():
                 text = self.view.substr(region)
                 print(text)
-                pinyinStr = pinyin.pinyin.get(text, format="strip", delimiter="_")
+                pinyinStr = translate.get(text, format="strip", delimiter="_")
                 print(pinyinStr)
                 if pinyinStr is not None:
                     self.view.replace(edit, region, pinyinStr)
